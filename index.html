@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chúc mừng sinh nhật em iu</title>
+<style>
+    body {
+        background-color: pink;
+        color: white;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+</style>
+</head>
+<body>
+    <div id="text"></div>
+
+    <script>
+        // Danh sách câu chữ
+        const messages = [
+            "Em iu à",
+            "Em là ánh sáng đời anh 🌟",
+            "Hôm nay là sinh nhật của em",
+            "Anh muốn nói là",
+            "Chúc mừng sinh nhật em iu, anh iu em rất nhiều ❤️❤️❤️❤️"
+        ];
+
+        let index = 0;
+        const textDiv = document.getElementById("text");
+
+        // Hàm đổi câu sau mỗi 2 giây
+        function changeMessage() {
+            textDiv.textContent = messages[index];
+            index = (index + 1) % messages.length; // quay lại từ đầu
+        }
+
+        changeMessage(); // Hiển thị câu đầu tiên ngay lập tức
+        setInterval(changeMessage, 2000); // đổi sau mỗi 2 giây
+    </script>
+</body>
+</html>
